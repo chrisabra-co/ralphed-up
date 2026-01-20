@@ -1,13 +1,13 @@
 {
-  "name": "ralph-sessions",
+  "name": "ralphed-up",
   "version": "1.0.0",
-  "description": "Hybrid autonomous development system combining RALPHED's bash loop with specialized agents",
+  "description": "Hybrid autonomous development system combining RALPHED's bash loop with CC-Sessions' specialized agents",
   "main": "lib/setup.js",
   "bin": {
-    "ralph-sessions": "./bin/ralph-sessions.js"
+    "ralphed-up": "./bin/ralphed-up.js"
   },
   "scripts": {
-    "start": "node bin/ralph-sessions.js"
+    "start": "node bin/ralphed-up.js"
   },
   "keywords": [
     "claude",
@@ -15,7 +15,9 @@
     "autonomous",
     "development",
     "agents",
-    "code-review"
+    "code-review",
+    "ralphed",
+    "cc-sessions"
   ],
   "author": "",
   "license": "MIT",

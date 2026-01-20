@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #
-# Ralph-Sessions: Hybrid Autonomous Development System
-# Combines RALPHED's autonomous bash loop with specialized agents
+# Ralphed Up: Hybrid Autonomous Development System
+# Combines RALPHED's autonomous bash loop with CC-Sessions' specialized agents
 #
 
 set -euo pipefail
@@ -468,7 +468,7 @@ run_iteration() {
 
     echo ""
     echo -e "${CYAN}╔══════════════════════════════════════════════════════════════╗${NC}"
-    echo -e "${CYAN}║           RALPH-SESSIONS ITERATION ${iteration}                        ║${NC}"
+    echo -e "${CYAN}║           RALPHED UP ITERATION ${iteration}                        ║${NC}"
     echo -e "${CYAN}╚══════════════════════════════════════════════════════════════╝${NC}"
     echo ""
 
@@ -585,7 +585,7 @@ run_iteration() {
 # ============================================================================
 
 cmd_init() {
-    log_info "Initializing Ralph-Sessions..."
+    log_info "Initializing Ralphed Up..."
 
     ensure_directories
     init_state
@@ -602,7 +602,7 @@ cmd_init() {
         log_info "Created AGENTS.md"
     fi
 
-    log_success "Ralph-Sessions initialized!"
+    log_success "Ralphed Up initialized!"
     echo ""
     echo "Next steps:"
     echo "  1. Edit IMPLEMENTATION_PLAN.md to add your tasks"
@@ -620,7 +620,7 @@ cmd_status() {
     next_task=$(get_next_task)
 
     echo ""
-    echo -e "${CYAN}Ralph-Sessions Status${NC}"
+    echo -e "${CYAN}Ralphed Up Status${NC}"
     echo "═══════════════════════════════════════"
     echo ""
     echo "Iteration: ${iteration}"
@@ -677,9 +677,9 @@ cmd_run() {
 
 cmd_help() {
     echo ""
-    echo "Ralph-Sessions: Hybrid Autonomous Development System"
+    echo "Ralphed Up: Hybrid Autonomous Development System"
     echo ""
-    echo "Usage: ./ralph-sessions.sh <command> [args]"
+    echo "Usage: ./ralphed-up.sh <command> [args]"
     echo ""
     echo "Commands:"
     echo "  init          Initialize directory structure and state"

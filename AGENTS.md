@@ -1,6 +1,6 @@
 # Project Conventions
 
-> This file defines project-specific conventions for the Ralph-Sessions system.
+> This file defines project-specific conventions for the Ralphed Up system.
 > Loaded alongside agent definitions to provide context.
 
 ## Testing
@@ -20,8 +20,8 @@ test_patterns: []
 
 ### Directory Structure
 ```
-ralph-sessions/
-├── ralph-sessions.sh       # Main orchestrator
+your-project/
+├── ralphed-up.sh           # Main orchestrator
 ├── IMPLEMENTATION_PLAN.md  # Task list + Backlog
 ├── AGENTS.md               # This file (project conventions)
 ├── .claude/

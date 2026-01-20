@@ -1,6 +1,14 @@
-# Ralph-Sessions
+# Ralphed Up
 
-A hybrid autonomous development system combining RALPHED's autonomous bash loop with specialized agents for structured, self-correcting development workflows.
+A hybrid autonomous development system combining the [Ralph Wiggum Method](https://ghuntley.com/ralph)'s autonomous bash loop with [CC-Sessions](https://github.com/GWUDCAP/cc-sessions)' specialized agents for structured, self-correcting development workflows.
+
+## Credits
+
+This project builds on ideas from:
+
+- **[Ralph Wiggum Method](https://ghuntley.com/ralph)** by Geoffrey Huntley - The autonomous bash loop pattern with fresh context per iteration
+- **[How to Ralph Wiggum](https://github.com/ghuntley/how-to-ralph-wiggum)** - Official methodology and implementation guide
+- **[CC-Sessions](https://github.com/GWUDCAP/cc-sessions)** - Specialized agents for context gathering, code review, and logging
 
 ## Features
 
@@ -20,29 +28,29 @@ git clone https://github.com/chrisabra-co/ralphed-up.git
 cd ralphed-up
 
 # Initialize in your project
-./ralph-sessions.sh init
+./ralphed-up.sh init
 ```
 
 ### Via npx (coming soon)
 
 ```bash
-npx ralph-sessions
+npx ralphed-up
 ```
 
 ## Usage
 
 ```bash
 # Show current status and next task
-./ralph-sessions.sh status
+./ralphed-up.sh status
 
 # Run a single iteration
-./ralph-sessions.sh single
+./ralphed-up.sh single
 
 # Run multiple iterations
-./ralph-sessions.sh run 5
+./ralphed-up.sh run 5
 
 # Show help
-./ralph-sessions.sh help
+./ralphed-up.sh help
 ```
 
 ## Workflow
@@ -93,7 +101,7 @@ Each iteration follows this 9-phase workflow:
 
 ```
 your-project/
-├── ralph-sessions.sh           # Main orchestrator
+├── ralphed-up.sh               # Main orchestrator
 ├── IMPLEMENTATION_PLAN.md      # Task list + Backlog section
 ├── AGENTS.md                   # Project conventions
 │

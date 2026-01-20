@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- **Main orchestrator** (`ralph-sessions.sh`)
+- **Main orchestrator** (`ralphed-up.sh`)
   - Commands: `init`, `status`, `single`, `run [n]`, `help`
   - 9-phase workflow per iteration
   - Auto-detection of test commands (npm, pytest, cargo, go, make)
@@ -51,9 +51,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Auto-detects test commands
   - Creates directory structure and files
 
+### Credits
+
+This project builds on ideas from:
+- **[Ralph Wiggum Method](https://ghuntley.com/ralph)** by Geoffrey Huntley
+- **[How to Ralph Wiggum](https://github.com/ghuntley/how-to-ralph-wiggum)** - Official methodology
+- **[CC-Sessions](https://github.com/GWUDCAP/cc-sessions)**
+
 ### Design Decisions
 
-- Fresh context each iteration (Ralph-style) - no state carried between iterations
+- Fresh context each iteration (RALPHED-style) - no state carried between iterations
 - CGA focuses on task scope, not entire codebase
 - Critical issues loop back in-iteration (preserves context)
 - Warnings require documented decisions, suggestions go to backlog

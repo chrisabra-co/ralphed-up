@@ -12,8 +12,8 @@ const {
   LOGGING_AGENT,
 } = require('./templates.js');
 
-// Get the ralph-sessions.sh script content
-const RALPH_SESSIONS_SCRIPT_URL = 'https://raw.githubusercontent.com/your-repo/ralph-sessions/main/ralph-sessions.sh';
+// Get the ralphed-up.sh script content
+const RALPHED_UP_SCRIPT_URL = 'https://raw.githubusercontent.com/chrisabra-co/ralphed-up/main/ralphed-up.sh';
 
 async function detectTestCommand(projectDir) {
   // Check for common test configurations
@@ -69,25 +69,25 @@ function createDirectories(baseDir) {
   }
 }
 
-function copyRalphSessionsScript(baseDir) {
+function copyRalphedUpScript(baseDir) {
   // For now, create a placeholder that points to where the script should be
   // In a real npm package, this would be bundled
-  const scriptPath = path.join(baseDir, 'ralph-sessions.sh');
+  const scriptPath = path.join(baseDir, 'ralphed-up.sh');
 
   if (!fs.existsSync(scriptPath)) {
     // Create a minimal script that tells users to download the full version
     const minimalScript = `#!/usr/bin/env bash
 #
-# Ralph-Sessions: Hybrid Autonomous Development System
+# Ralphed Up: Hybrid Autonomous Development System
 #
 # This is a placeholder. Please download the full script from:
-# ${RALPH_SESSIONS_SCRIPT_URL}
+# ${RALPHED_UP_SCRIPT_URL}
 #
-# Or copy it from the ralph-sessions repository.
+# Or copy it from the ralphed-up repository.
 #
 
-echo "Please download the full ralph-sessions.sh script"
-echo "See: ${RALPH_SESSIONS_SCRIPT_URL}"
+echo "Please download the full ralphed-up.sh script"
+echo "See: ${RALPHED_UP_SCRIPT_URL}"
 exit 1
 `;
     fs.writeFileSync(scriptPath, minimalScript);
@@ -100,7 +100,7 @@ exit 1
 async function runSetup() {
   console.log('');
   console.log(pc.cyan('╔══════════════════════════════════════════════════════════════╗'));
-  console.log(pc.cyan('║           Ralph-Sessions Setup Wizard                        ║'));
+  console.log(pc.cyan('║              Ralphed Up Setup Wizard                         ║'));
   console.log(pc.cyan('╚══════════════════════════════════════════════════════════════╝'));
   console.log('');
 
@@ -146,7 +146,7 @@ async function runSetup() {
   const testCommand = testResponse.testCommand || detectedTestCommand;
 
   console.log('');
-  console.log(pc.cyan('Creating ralph-sessions structure...'));
+  console.log(pc.cyan('Creating Ralphed Up structure...'));
   console.log('');
 
   // Create directories
@@ -228,19 +228,19 @@ async function runSetup() {
     console.log(pc.green('✓') + ' Created state/backlog-queue.json');
   }
 
-  // Note about ralph-sessions.sh
-  const scriptExists = copyRalphSessionsScript(projectDir);
+  // Note about ralphed-up.sh
+  const scriptExists = copyRalphedUpScript(projectDir);
 
   console.log('');
-  console.log(pc.green('Ralph-Sessions initialized successfully!'));
+  console.log(pc.green('Ralphed Up initialized successfully!'));
   console.log('');
   console.log('Next steps:');
   console.log('  1. Edit IMPLEMENTATION_PLAN.md to add your tasks');
   console.log('  2. Edit AGENTS.md to configure project conventions');
   if (!scriptExists) {
-    console.log(pc.yellow('  3. Download the full ralph-sessions.sh script'));
+    console.log(pc.yellow('  3. Download the full ralphed-up.sh script'));
   }
-  console.log('  ' + (scriptExists ? '3' : '4') + '. Run: ./ralph-sessions.sh single');
+  console.log('  ' + (scriptExists ? '3' : '4') + '. Run: ./ralphed-up.sh single');
   console.log('');
 }
 
