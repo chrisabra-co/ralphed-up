@@ -57,45 +57,19 @@ npx ralphed-up
 
 Each iteration follows this 9-phase workflow:
 
-```
-┌──────────────────────────────────────────────────────────────┐
-│ 1. Load next unchecked task from IMPLEMENTATION_PLAN.md     │
-├──────────────────────────────────────────────────────────────┤
-│ 2. CONTEXT GATHERING AGENT                                  │
-│    - Explores codebase for task-relevant context            │
-│    - Writes narrative Context Manifest to task file         │
-├──────────────────────────────────────────────────────────────┤
-│ 3. Generate Acceptance Criteria (auto-approved)             │
-├──────────────────────────────────────────────────────────────┤
-│ 4. IMPLEMENTATION                                           │
-│    - Uses CGA context + project conventions                 │
-├──────────────────────────────────────────────────────────────┤
-│ 5. RUN TESTS                                                │
-│    - Retry implementation once if tests fail                │
-├──────────────────────────────────────────────────────────────┤
-│ 6. CODE REVIEW AGENT                                        │
-│    - Categorizes: Critical / Warning / Suggestion           │
-│    ├─ Critical? → Loop back to step 4 (max 3 attempts)     │
-│    ├─ Warning? → Document decision in task file            │
-│    └─ Suggestion? → Queue to backlog                       │
-├──────────────────────────────────────────────────────────────┤
-│ 7. LOGGING AGENT                                            │
-│    - Updates Work Log in task file                          │
-│    - Cleans outdated info, consolidates entries             │
-├──────────────────────────────────────────────────────────────┤
-│ 8. GIT COMMIT                                               │
-│    - Semantic commit message                                │
-│    - Process backlog queue → add items to IMPL_PLAN         │
-├──────────────────────────────────────────────────────────────┤
-│ 9. ITERATION SUMMARY                                        │
-│    - Mark task complete in IMPLEMENTATION_PLAN.md           │
-│    - Archive session to logs/                               │
-│    - Print summary                                          │
-├──────────────────────────────────────────────────────────────┤
-│ ═══════════ CONTEXT CLEARED ═══════════                     │
-│ Fresh Claude invocation. New iteration begins.              │
-└──────────────────────────────────────────────────────────────┘
-```
+| Phase | Description |
+|-------|-------------|
+| **1. Load Task** | Get next unchecked task from `IMPLEMENTATION_PLAN.md` |
+| **2. Context Gathering** | Agent explores codebase, writes Context Manifest to task file |
+| **3. Acceptance Criteria** | Auto-generated from task description |
+| **4. Implementation** | Uses CGA context + project conventions from `AGENTS.md` |
+| **5. Run Tests** | Execute tests, retry implementation once if they fail |
+| **6. Code Review** | Agent categorizes issues: 🔴 Critical → loop back, 🟡 Warning → document, 🟢 Suggestion → backlog |
+| **7. Logging** | Agent updates Work Log, cleans outdated info |
+| **8. Git Commit** | Semantic commit message, process backlog queue |
+| **9. Archive** | Mark task complete, archive session to `logs/` |
+
+**⟳ Context cleared. Fresh Claude invocation. New iteration begins.**
 
 ## Directory Structure
 
