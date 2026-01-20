@@ -1,0 +1,19 @@
+# OS
+.DS_Store
+
+# Node
+node_modules/
+
+# Logs (keep structure, ignore contents)
+logs/sessions/*
+logs/transcripts/logging/*
+!logs/sessions/.gitkeep
+!logs/transcripts/logging/.gitkeep
+
+# Plans (active task file)
+plans/current-task.md
+
+# State (user-specific)
+state/iteration.json
+state/backlog-queue.json
+state/last-commit.txt

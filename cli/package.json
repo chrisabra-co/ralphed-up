@@ -1,0 +1,29 @@
+{
+  "name": "ralph-sessions",
+  "version": "1.0.0",
+  "description": "Hybrid autonomous development system combining RALPHED's bash loop with specialized agents",
+  "main": "lib/setup.js",
+  "bin": {
+    "ralph-sessions": "./bin/ralph-sessions.js"
+  },
+  "scripts": {
+    "start": "node bin/ralph-sessions.js"
+  },
+  "keywords": [
+    "claude",
+    "ai",
+    "autonomous",
+    "development",
+    "agents",
+    "code-review"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "picocolors": "^1.0.0",
+    "prompts": "^2.4.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
